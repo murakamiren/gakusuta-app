@@ -3,9 +3,9 @@ import Layout from "../components/layout/layout";
 
 const Home: NextPageWithLayout = () => {
 	return (
-		<div>
+		<main>
 			<p className="text-3xl">aa</p>
-		</div>
+		</main>
 	);
 };
 
