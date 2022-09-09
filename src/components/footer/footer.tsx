@@ -11,7 +11,8 @@ const Footer: FC = () => {
 						<li key={i}>
 							<NextLink href={item.href}>
 								<a className="flex flex-col items-center">
-									<div className="mb-[4px]">
+									<div className="mb-[4px] relative">
+										<div className="w-[14px] h-[14px] bg-primary-yellow absolute top-[-2px] right-[-4px] rounded-full -z-10" />
 										<item.icon className="fill-primary-blue" />
 									</div>
 									<p className="bottom-nav-link-text">{item.text}</p>
