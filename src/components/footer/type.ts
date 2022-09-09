@@ -1,5 +1,5 @@
 export type bottomNavItemType = {
 	text: string;
-	icon: string;
+	icon: any;
 	href: string;
 };

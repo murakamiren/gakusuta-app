@@ -1,4 +1,4 @@
-import type { NextPage, NextPageWithLayout } from "next";
+import type { NextPageWithLayout } from "next";
 import Layout from "../components/layout/layout";
 
 const Home: NextPageWithLayout = () => {

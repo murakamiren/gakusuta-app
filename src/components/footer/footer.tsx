@@ -10,7 +10,10 @@ const Footer: FC = () => {
 					{bottomNavItems.map((item, i) => (
 						<li key={i}>
 							<NextLink href={item.href}>
-								<a>
+								<a className="flex flex-col items-center">
+									<div className="mb-[4px]">
+										<item.icon className="fill-primary-blue" />
+									</div>
 									<p className="bottom-nav-link-text">{item.text}</p>
 								</a>
 							</NextLink>
