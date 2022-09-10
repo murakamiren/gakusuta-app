@@ -10,10 +10,6 @@ const SearchBar: FC<SearchBarProps> = ({ placeholder, onClick, iconColor }) => {
 	const inputElement = useRef<HTMLInputElement | null>(null);
 	const { handleFocus } = useSearchBar();
 
-	useEffect(() => {
-		handleFocus(inputElement);
-	}, []);
-
 	return (
 		<div className="w-full flex items-center justify-between">
 			<label className="w-full relative">
@@ -23,6 +19,7 @@ const SearchBar: FC<SearchBarProps> = ({ placeholder, onClick, iconColor }) => {
 					onFocus={() => setIsFocus(true)}
 					onBlur={() => setIsFocus(false)}
 					onClick={onClick}
+					autoFocus={handleFocus()}
 				/>
 				<div className={isFocus ? `opacity-0` : `opacity-100`}>
 					<p className="absolute top-1/2 left-[46px] -translate-y-1/2 text-primary-gray">{placeholder}</p>
