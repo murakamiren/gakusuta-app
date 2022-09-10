@@ -33,5 +33,12 @@ export const useHeaderTitle = () => {
 		router.back();
 	};
 
-	return { headerTitle, back };
+	const isParamEmpty = Object.keys(router.query).length === 0;
+
+	const isBackArrowExist = () => {
+		if (isParamEmpty && currentPath === "/search") return true;
+		return isParamEmpty;
+	};
+
+	return { headerTitle, back, isBackArrowExist };
 };
