@@ -1,7 +1,6 @@
 import { NextPageWithLayout } from "next";
 import Footer from "../components/footer/footer";
-import HomeSearchBar from "../components/homeSearchBar/homeSearchBar";
-import Layout from "../components/layout/layout";
+import HomeSearchBarHeader from "../components/homeSearchBarHeader/homeSearchBarHeader";
 
 const Home: NextPageWithLayout = () => {
 	return (
@@ -13,7 +12,7 @@ const Home: NextPageWithLayout = () => {
 
 Home.getLayout = (page) => (
 	<>
-		<HomeSearchBar />
+		<HomeSearchBarHeader />
 		{page}
 		<Footer />
 	</>
