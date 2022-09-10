@@ -1,4 +1,6 @@
 import { NextPageWithLayout } from "next";
+import Footer from "../components/footer/footer";
+import HomeSearchBar from "../components/homeSearchBar/homeSearchBar";
 import Layout from "../components/layout/layout";
 
 const Home: NextPageWithLayout = () => {
@@ -9,6 +11,12 @@ const Home: NextPageWithLayout = () => {
 	);
 };
 
-Home.getLayout = (page) => <Layout>{page}</Layout>;
+Home.getLayout = (page) => (
+	<>
+		<HomeSearchBar />
+		{page}
+		<Footer />
+	</>
+);
 
 export default Home;
