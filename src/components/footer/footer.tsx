@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 const Footer: FC = () => {
 	const router = useRouter();
 	const currentPath = router.asPath;
+	console.log(currentPath);
+	console.log(router.basePath);
 
 	return (
 		<footer className="fixed bottom-0 w-screen bg-white">
@@ -13,7 +15,7 @@ const Footer: FC = () => {
 				<ul className="flex mx-7 mb-[32px] mt-3 justify-between">
 					{bottomNavItems.map((item, i) => (
 						<li key={i}>
-							<NextLink href={item.href}>
+							<NextLink href={item.href} passHref>
 								<a className="flex flex-col items-center">
 									<div className="mb-[4px] relative">
 										{currentPath === item.href && (

@@ -1,10 +1,10 @@
-import type { NextPageWithLayout } from "next";
+import { NextPageWithLayout } from "next";
 import Layout from "../components/layout/layout";
 
 const Home: NextPageWithLayout = () => {
 	return (
 		<main>
-			<p className="text-3xl">aa</p>
+			<p>home</p>
 		</main>
 	);
 };
