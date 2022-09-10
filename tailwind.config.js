@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
 	content: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
 	theme: {
@@ -14,6 +17,9 @@ module.exports = {
 					black: "#232323",
 					bgColor: "#F3F5F8",
 				},
+			},
+			fontFamily: {
+				display: ["Montserrat", "Hiragino Kaku Gothic Pro", defaultTheme.fontFamily.sans],
 			},
 		},
 	},
