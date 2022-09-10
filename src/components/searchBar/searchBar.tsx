@@ -7,7 +7,6 @@ import classNames from "classnames";
 
 const SearchBar: FC<SearchBarProps> = ({ placeholder, onClick, iconColor }) => {
 	const [isFocus, setIsFocus] = useState<boolean>(false);
-	const inputElement = useRef<HTMLInputElement | null>(null);
 	const { handleFocus } = useSearchBar();
 
 	return (
