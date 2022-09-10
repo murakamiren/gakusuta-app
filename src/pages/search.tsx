@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from "next";
-import Layout from "../components/layout/layout";
+import Header from "../components/header/header";
 
 const Search: NextPageWithLayout = () => {
 	return (
@@ -9,6 +9,11 @@ const Search: NextPageWithLayout = () => {
 	);
 };
 
-Search.getLayout = (page) => <Layout>{page}</Layout>;
+Search.getLayout = (page) => (
+	<>
+		<Header />
+		{page}
+	</>
+);
 
 export default Search;

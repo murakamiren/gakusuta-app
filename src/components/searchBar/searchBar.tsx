@@ -1,9 +1,9 @@
-import { FC, useRef, useState } from "react";
+import { FC, useState } from "react";
 import { SearchBarProps } from "./type";
 import SettingIcon from "../../assets/setting.svg";
 import SearchIcon from "../../assets/search.svg";
 
-const SearchBar: FC<SearchBarProps> = ({ placeholder }) => {
+const SearchBar: FC<SearchBarProps> = ({ placeholder, onClick }) => {
 	const [isFocus, setIsFocus] = useState<boolean>(false);
 
 	return (
@@ -14,6 +14,7 @@ const SearchBar: FC<SearchBarProps> = ({ placeholder }) => {
 					className="w-full h-14 rounded-lg px-[18px] text-primary-black"
 					onFocus={() => setIsFocus(true)}
 					onBlur={() => setIsFocus(false)}
+					onClick={onClick}
 				/>
 				<div className={isFocus ? `opacity-0` : `opacity-100`}>
 					<p className="absolute top-1/2 left-[46px] -translate-y-1/2 text-primary-gray">{placeholder}</p>

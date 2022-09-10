@@ -7,7 +7,7 @@ const Footer: FC = () => {
 	const router = useRouter();
 	const currentPath = router.asPath;
 	console.log(currentPath);
-	console.log(router.basePath);
+	console.log(router.query);
 
 	return (
 		<footer className="fixed bottom-0 w-screen bg-white">
