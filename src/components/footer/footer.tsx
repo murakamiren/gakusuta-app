@@ -1,8 +1,12 @@
 import { FC } from "react";
 import NextLink from "next/link";
 import { bottomNavItems } from "./bottomNavItems";
+import { useRouter } from "next/router";
 
 const Footer: FC = () => {
+	const router = useRouter();
+	const currentPath = router.asPath;
+
 	return (
 		<footer className="fixed bottom-0 w-screen bg-white">
 			<nav>
@@ -12,10 +16,16 @@ const Footer: FC = () => {
 							<NextLink href={item.href}>
 								<a className="flex flex-col items-center">
 									<div className="mb-[4px] relative">
-										<div className="w-[14px] h-[14px] bg-primary-yellow absolute top-[-2px] right-[-4px] rounded-full -z-10" />
-										<item.icon className="fill-primary-blue" />
+										{currentPath === item.href && (
+											<div
+												className={`w-[14px] h-[14px] bg-primary-yellow absolute top-[-2px] right-[-4px] rounded-full -z-10`}
+											/>
+										)}
+										<item.icon className={currentPath === item.href ? `fill-primary-blue` : `fill-primary-gray`} />
 									</div>
-									<p className="bottom-nav-link-text">{item.text}</p>
+									<p className={currentPath === item.href ? `text-primary-blue text-xs` : `text-primary-gray text-xs`}>
+										{item.text}
+									</p>
 								</a>
 							</NextLink>
 						</li>
