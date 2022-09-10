@@ -1,10 +1,18 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { SearchBarProps } from "./type";
 import SettingIcon from "../../assets/setting.svg";
 import SearchIcon from "../../assets/search.svg";
+import { useSearchBar } from "./hook";
+import classNames from "classnames";
 
-const SearchBar: FC<SearchBarProps> = ({ placeholder, onClick }) => {
+const SearchBar: FC<SearchBarProps> = ({ placeholder, onClick, iconColor }) => {
 	const [isFocus, setIsFocus] = useState<boolean>(false);
+	const inputElement = useRef<HTMLInputElement | null>(null);
+	const { handleFocus } = useSearchBar();
+
+	useEffect(() => {
+		handleFocus(inputElement);
+	}, []);
 
 	return (
 		<div className="w-full flex items-center justify-between">
@@ -21,7 +29,7 @@ const SearchBar: FC<SearchBarProps> = ({ placeholder, onClick }) => {
 					<SearchIcon className="stroke-primary-gray fill-transparent absolute top-1/2 left-[18px] -translate-y-1/2" />
 				</div>
 			</label>
-			<SettingIcon className="fill-white ml-[14px]" />
+			<SettingIcon className={classNames("ml-[14px]", iconColor ? iconColor : "fill-white")} />
 		</div>
 	);
 };

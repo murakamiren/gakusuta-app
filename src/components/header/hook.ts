@@ -37,7 +37,7 @@ export const useHeaderTitle = () => {
 
 	const isBackArrowExist = () => {
 		if (isParamEmpty && currentPath === "/search") return true;
-		return isParamEmpty;
+		return !isParamEmpty;
 	};
 
 	return { headerTitle, back, isBackArrowExist };
