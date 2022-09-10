@@ -29,5 +29,9 @@ export const useHeaderTitle = () => {
 		}
 	}, [currentPath, areaQueryParam]);
 
-	return headerTitle;
+	const back = () => {
+		router.back();
+	};
+
+	return { headerTitle, back };
 };
