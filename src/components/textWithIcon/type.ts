@@ -3,4 +3,5 @@ export type TextWithIconProps = {
 	Icon: any;
 	isFill?: boolean;
 	isStroke?: boolean;
+	size: "base" | "xl";
 };
