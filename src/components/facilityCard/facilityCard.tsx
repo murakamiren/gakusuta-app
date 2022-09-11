@@ -5,6 +5,7 @@ import FavoriteIcon from "../../assets/favorite.svg";
 import BottomInfo from "./bottomInfo/bottomInfo";
 import Divider from "../divider/divider";
 import Feature from "../feature/feature";
+import Image from "next/image";
 
 const FacilityCard: FC<FacilityCardProps> = ({ size, isFavorite }) => {
 	return (
@@ -23,6 +24,9 @@ const FacilityCard: FC<FacilityCardProps> = ({ size, isFavorite }) => {
 						size === "xl" && "h-[180px]"
 					)}
 				>
+					<div className="w-full h-full overflow-hidden relative">
+						<Image src="/studio.png" alt="studio" layout="fill" className="rounded" />
+					</div>
 					<div className="w-8 h-8 rounded-full absolute top-2 right-2 flex justify-center items-center bg-white">
 						<FavoriteIcon className={classNames(isFavorite ? "fill-primary-blue" : "fill-primary-gray")} />
 					</div>
@@ -49,7 +53,7 @@ const FacilityCard: FC<FacilityCardProps> = ({ size, isFavorite }) => {
 					<div className="space-x-2 flex">
 						<Feature text="今すぐ予約可能" />
 						<Feature text="除菌スプレーあり" />
-						<Feature text="除菌スプレーあり" />
+						<Feature text="直前割" />
 					</div>
 				</div>
 			</div>
