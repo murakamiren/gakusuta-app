@@ -10,7 +10,7 @@ const Header: FC = () => {
 			<div className="max-w-screen h-[90px] bg-primary-blue flex justify-center px-6">
 				<div className="mt-12 relative w-full">
 					<div className="flex justify-center items-center space-x-1">
-						{isLocationIcon && <LocationIcon className="fill-white" />}
+						{isLocationIcon && <LocationIcon className="fill-white w-[26px] h-[26px]" />}
 						<p className="text-white text-center text-lg font-bold">{headerTitle}</p>
 					</div>
 					{isBackArrowExist() && (

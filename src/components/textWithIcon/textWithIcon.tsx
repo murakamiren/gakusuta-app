@@ -2,9 +2,9 @@ import classNames from "classnames";
 import { FC } from "react";
 import { TextWithIconProps } from "./type";
 
-const TextWithIcon: FC<TextWithIconProps> = ({ text, Icon, isFill, isStroke, size }) => {
+const TextWithIcon: FC<TextWithIconProps> = ({ text, Icon, isFill, isStroke, size, onClick }) => {
 	return (
-		<div className="flex items-center space-x-1">
+		<div className="flex items-center space-x-1" onClick={onClick}>
 			<Icon
 				className={classNames(
 					isFill ? "fill-primary-blue" : "fill-transparent",

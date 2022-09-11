@@ -4,4 +4,5 @@ export type TextWithIconProps = {
 	isFill?: boolean;
 	isStroke?: boolean;
 	size: "base" | "xl";
+	onClick?: () => void;
 };
