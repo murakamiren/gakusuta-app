@@ -3,12 +3,20 @@ import { useEffect, useState } from "react";
 
 export const useHeaderTitle = () => {
 	const [headerTitle, setHeaderTitle] = useState<string>("");
+	const [isLocationIcon, setIsLocationIcon] = useState<boolean>(false);
 	const router = useRouter();
 	const currentPath = router.asPath;
+	const decodedCurrentPath = decodeURI(currentPath);
 	const areaQueryParam = router.query.area;
 
 	useEffect(() => {
-		switch (currentPath) {
+		if (decodedCurrentPath === `/search/${areaQueryParam}`) {
+			setIsLocationIcon(true);
+		} else {
+			setIsLocationIcon(false);
+		}
+
+		switch (decodedCurrentPath) {
 			case "/":
 				setHeaderTitle("ホーム");
 				break;
@@ -30,6 +38,7 @@ export const useHeaderTitle = () => {
 	}, [currentPath, areaQueryParam]);
 
 	const back = () => {
+		if (decodedCurrentPath === `/search/${areaQueryParam}`) return router.replace("/search");
 		router.back();
 	};
 
@@ -40,5 +49,5 @@ export const useHeaderTitle = () => {
 		return !isParamEmpty;
 	};
 
-	return { headerTitle, back, isBackArrowExist };
+	return { headerTitle, back, isBackArrowExist, isLocationIcon };
 };

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import TextWithIcon from "../textWithIcon/textWithIcon";
+import TextWithIcon from "../../textWithIcon/textWithIcon";
 import { BottomInfoProps } from "./type";
 import LocationIcon from "../../../assets/location.svg";
 import TrainIcon from "../../../assets/train.svg";
