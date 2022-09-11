@@ -9,7 +9,7 @@ const ChooseItemCard: FC<ChooseItemCardProps> = ({ bgColor, title }) => {
 				<div className="w-[78px] h-[78px] rounded-full bg-white flex justify-center items-center">
 					<p className="text-sm">イラスト</p>
 				</div>
-				<p className="w-full ml-4 mt-[10px] text-white text-[14px]">{title}</p>
+				<p className="w-full ml-4 mt-[10px] font-bold text-white text-[14px]">{title}</p>
 			</div>
 		</div>
 	);

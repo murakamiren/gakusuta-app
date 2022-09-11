@@ -25,7 +25,13 @@ const Footer: FC = () => {
 										)}
 										<item.icon className={currentPath === item.href ? `fill-primary-blue` : `fill-primary-gray`} />
 									</div>
-									<p className={currentPath === item.href ? `text-primary-blue text-xs` : `text-primary-gray text-xs`}>
+									<p
+										className={
+											currentPath === item.href
+												? `text-primary-blue font-bold text-xs`
+												: `text-primary-gray font-bold text-xs`
+										}
+									>
 										{item.text}
 									</p>
 								</a>
