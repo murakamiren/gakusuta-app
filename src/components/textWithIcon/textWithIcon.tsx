@@ -9,6 +9,7 @@ const TextWithIcon: FC<TextWithIconProps> = ({ text, Icon, isFill, isStroke, siz
 				className={classNames(
 					isFill ? "fill-primary-blue" : "fill-transparent",
 					isStroke ? "stroke-primary-blue" : "stroke-transparent",
+					size === "base" && "w-[18px] h-[18px]",
 					size === "xl" && "w-[26px] h-[26px]"
 				)}
 			/>
