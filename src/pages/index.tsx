@@ -1,4 +1,5 @@
 import { NextPageWithLayout } from "next";
+import ChooseItemCard from "../components/chooseItemCard/chooseItemCard";
 import EventBanner from "../components/eventBanner/eventBanner";
 import Footer from "../components/footer/footer";
 import HomeSearchBarHeader from "../components/homeSearchBarHeader/homeSearchBarHeader";
@@ -11,6 +12,10 @@ const Home: NextPageWithLayout = () => {
 					<EventBanner size="base" />
 					<EventBanner size="base" />
 				</div>
+			</div>
+			<div className="mt-10 px-6 flex justify-between">
+				<ChooseItemCard bgColor="bg-primary-lime" title="スタジオ" />
+				<ChooseItemCard bgColor="bg-primary-red" title="ライブハウス" />
 			</div>
 		</main>
 	);
