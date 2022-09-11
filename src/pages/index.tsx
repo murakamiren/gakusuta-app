@@ -4,6 +4,7 @@ import EventBanner from "../components/eventBanner/eventBanner";
 import Footer from "../components/footer/footer";
 import HomeSearchBarHeader from "../components/homeSearchBarHeader/homeSearchBarHeader";
 import HeadingIcon from "../assets/secondLogo.svg";
+import FacilityCard from "../components/facilityCard/facilityCard";
 
 const Home: NextPageWithLayout = () => {
 	return (
@@ -21,6 +22,12 @@ const Home: NextPageWithLayout = () => {
 			<div className="flex items-center pl-6 mt-10 space-x-2">
 				<HeadingIcon />
 				<h2 className="font-bold text-[18px]">現在地付近のおすすめ</h2>
+			</div>
+			<div className="mt-4 pl-6 flex flex-nowrap overflow-x-scroll hidden-scrollbar">
+				<div className="space-x-4 flex">
+					<FacilityCard size="base" isFavorite />
+					<FacilityCard size="base" />
+				</div>
 			</div>
 			<div className="flex items-center pl-6 mt-10 space-x-2">
 				<HeadingIcon />
