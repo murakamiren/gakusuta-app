@@ -25,7 +25,7 @@ const FacilityCard: FC<FacilityCardProps> = ({ size, isFavorite }) => {
 					)}
 				>
 					<div className="w-full h-full overflow-hidden relative">
-						<Image src="/studio.png" alt="studio" layout="fill" className="rounded" />
+						<Image src="/image/studio.png" alt="studio" layout="fill" className="rounded" />
 					</div>
 					<div className="w-8 h-8 rounded-full absolute top-2 right-2 flex justify-center items-center bg-white">
 						<FavoriteIcon className={classNames(isFavorite ? "fill-primary-blue" : "fill-primary-gray")} />

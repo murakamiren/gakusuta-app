@@ -21,6 +21,9 @@ module.exports = {
 			fontFamily: {
 				display: ["Montserrat", "Hiragino Kaku Gothic Pro", defaultTheme.fontFamily.sans],
 			},
+			backgroundImage: {
+				searchBarHeaderPattern: "url('../../public/image/pattern.png')",
+			},
 		},
 	},
 	plugins: [],
