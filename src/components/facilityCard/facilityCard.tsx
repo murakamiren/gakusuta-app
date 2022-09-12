@@ -34,8 +34,8 @@ const FacilityCard: FC<FacilityCardProps> = ({ size, isFavorite }) => {
 				<h3 className={classNames("font-bold mt-3", size === "base" && "text-[14px]", size === "xl" && "text-base")}>
 					本格的な機材と設備がフル装備。手ぶらで最適なスタジオ。
 				</h3>
-				<p className="font-bold mt-2 text-base">
-					110<span className="text-[8px]">円</span>~1,320<span className="text-[8px]">円/時間</span>
+				<p className="font-semibold mt-2 text-[26px]">
+					110<span className="text-[12px]">円</span>~1,320<span className="text-[12px]">円/時間</span>
 				</p>
 				<div className="mt-2">
 					<BottomInfo
