@@ -14,6 +14,7 @@ const Button: FC<ButtonProps> = ({
 	fontSize,
 	borderColor,
 	isWidthFull,
+	disable,
 }) => {
 	return (
 		<button
@@ -24,8 +25,10 @@ const Button: FC<ButtonProps> = ({
 				isDetail && "border-primary-purple border",
 				bgColor && bgColor,
 				borderColor && `border ${borderColor}`,
-				isWidthFull && "w-full"
+				isWidthFull && "w-full",
+				disable && "bg-[#E2E6EC]"
 			)}
+			disabled={disable}
 		>
 			<p
 				className={classNames(
@@ -35,7 +38,8 @@ const Button: FC<ButtonProps> = ({
 					color && color,
 					mx && mx,
 					my && my,
-					fontSize && fontSize
+					fontSize && fontSize,
+					disable && "text-[#BABFC6]"
 				)}
 			>
 				{text}

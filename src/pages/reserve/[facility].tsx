@@ -1,4 +1,5 @@
 import { NextPageWithLayout } from "next";
+import ReserveFooter from "../../components/footer/reserveFooter/reserveFooter";
 import Header from "../../components/header/header";
 
 const ReserveSet: NextPageWithLayout = () => {
@@ -13,6 +14,7 @@ ReserveSet.getLayout = (page) => (
 	<>
 		<Header />
 		{page}
+		<ReserveFooter />
 	</>
 );
 

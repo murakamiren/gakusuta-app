@@ -10,4 +10,5 @@ export type ButtonProps = {
 	mx?: string;
 	my?: string;
 	isWidthFull?: boolean;
+	disable?: boolean;
 };

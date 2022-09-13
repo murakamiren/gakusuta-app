@@ -22,25 +22,35 @@ export const useHeaderTitle = () => {
 
 		switch (decodedCurrentPath) {
 			case "/":
+				setIsDetail(false);
 				setHeaderTitle("ホーム");
 				break;
 			case "/search":
+				setIsDetail(false);
 				setHeaderTitle("利用するエリアを入力する");
 				break;
 			case "/favorite":
+				setIsDetail(false);
 				setHeaderTitle("お気に入り");
 				break;
 			case "/reserve":
+				setIsDetail(false);
 				setHeaderTitle("予約済み");
 				break;
 			case `/search/${areaQueryParam}`:
+				setIsDetail(false);
 				typeof areaQueryParam === "string" && setHeaderTitle(areaQueryParam);
 				break;
 			case `/detail/${facilityQueryParam}`:
 				setIsDetail(true);
 				setHeaderTitle("");
 				break;
+			case `/reserve/${facilityQueryParam}`:
+				setIsDetail(false);
+				setHeaderTitle("空室確認・予約");
+				break;
 			default:
+				setIsDetail(false);
 				setHeaderTitle("デフォルト");
 		}
 	}, [currentPath]);

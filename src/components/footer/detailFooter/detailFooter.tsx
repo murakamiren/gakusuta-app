@@ -6,7 +6,7 @@ import { useDetailFooter } from "./hook";
 const DetailFooter: FC<DetailFooterProps> = ({ facilityId }) => {
 	const { pushReserve } = useDetailFooter();
 	return (
-		<footer className="fixed bottom-0 w-screen bg-white">
+		<footer className="fixed bottom-0 w-screen bg-white rounded-t-2xl">
 			<div className="flex justify-between items-center px-5 mt-4 mb-7">
 				<p className="font-semibold mt-2 text-[26px]">
 					110<span className="text-[12px]">円</span>~1,320<span className="text-[12px]">円/時間</span>
