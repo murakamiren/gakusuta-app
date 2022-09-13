@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from "next";
-import Layout from "../components/layout/layout";
+import Footer from "../components/footer/footer";
 
 const MyPage: NextPageWithLayout = () => {
 	return (
@@ -9,6 +9,11 @@ const MyPage: NextPageWithLayout = () => {
 	);
 };
 
-MyPage.getLayout = (page) => <Layout>{page}</Layout>;
+MyPage.getLayout = (page) => (
+	<>
+		{page}
+		<Footer />
+	</>
+);
 
 export default MyPage;
