@@ -1,15 +1,16 @@
 import classNames from "classnames";
+import Image from "next/image";
 import { FC } from "react";
 import { ChooseItemCardProps } from "./type";
 
-const ChooseItemCard: FC<ChooseItemCardProps> = ({ bgColor, title }) => {
+const ChooseItemCard: FC<ChooseItemCardProps> = ({ bgColor, title, img }) => {
 	return (
 		<div className={classNames("w-40 h-32 rounded-lg", bgColor)}>
-			<div className="w-full h-full flex flex-col items-center pt-[10px]">
-				<div className="w-[78px] h-[78px] rounded-full bg-white flex justify-center items-center">
-					<p className="text-sm">イラスト</p>
+			<div className="w-full h-full flex flex-col items-center pt-[6px]">
+				<div className="w-full h-[90px] flex justify-center items-center overflow-hidden relative">
+					<Image src={`/image/${img}`} alt="illustration" layout="fill" />
 				</div>
-				<p className="w-full ml-4 mt-[10px] font-bold text-white text-[14px]">{title}</p>
+				<p className="w-full ml-4 mt-[4px] font-bold text-white text-[14px]">{title}</p>
 			</div>
 		</div>
 	);
