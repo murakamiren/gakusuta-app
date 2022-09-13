@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 export const useHeaderTitle = () => {
 	const [headerTitle, setHeaderTitle] = useState<string>("");
 	const [isLocationIcon, setIsLocationIcon] = useState<boolean>(false);
+	const [isDetail, setIsDetail] = useState<boolean>(false);
 	const router = useRouter();
 	const currentPath = router.asPath;
 	const decodedCurrentPath = decodeURI(currentPath);
 	const areaQueryParam = router.query.area;
+	const facilityQueryParam = router.query.facility;
 
 	useEffect(() => {
 		if (decodedCurrentPath === `/search/${areaQueryParam}`) {
@@ -32,6 +34,10 @@ export const useHeaderTitle = () => {
 			case `/search/${areaQueryParam}`:
 				typeof areaQueryParam === "string" && setHeaderTitle(areaQueryParam);
 				break;
+			case `/detail/${facilityQueryParam}`:
+				setIsDetail(true);
+				setHeaderTitle("");
+				break;
 			default:
 				setHeaderTitle("デフォルト");
 		}
@@ -49,5 +55,5 @@ export const useHeaderTitle = () => {
 		return !isParamEmpty;
 	};
 
-	return { headerTitle, back, isBackArrowExist, isLocationIcon };
+	return { headerTitle, back, isBackArrowExist, isLocationIcon, isDetail };
 };

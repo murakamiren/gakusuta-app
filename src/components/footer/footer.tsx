@@ -10,7 +10,7 @@ const Footer: FC = () => {
 	console.log(router.query);
 
 	return (
-		<footer className="fixed bottom-0 w-screen bg-white" id="bottomNavBar">
+		<footer className="fixed bottom-0 w-screen bg-white">
 			<nav>
 				<ul className="flex mx-7 mb-[32px] mt-3 justify-between">
 					{bottomNavItems.map((item, i) => (

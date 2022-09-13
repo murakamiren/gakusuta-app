@@ -12,7 +12,7 @@ const Home: NextPageWithLayout = () => {
 			<div className="mt-6 pl-6 flex flex-nowrap overflow-x-scroll hidden-scrollbar">
 				<div className="space-x-2 flex">
 					<EventBanner size="base" img="banner-1.png" />
-					<EventBanner size="base" img="banner-1.png" />
+					<EventBanner size="base" img="banner-3.png" />
 				</div>
 			</div>
 			<div className="mt-10 px-6 flex justify-between">
@@ -35,8 +35,8 @@ const Home: NextPageWithLayout = () => {
 			</div>
 			<div className="flex flex-col items-center space-y-4 px-6 mt-4">
 				<EventBanner size="xl" img="banner-1.png" />
-				<EventBanner size="xl" img="banner-1.png" />
-				<EventBanner size="xl" img="banner-1.png" />
+				<EventBanner size="xl" img="banner-2.png" />
+				<EventBanner size="xl" img="banner-3.png" />
 			</div>
 		</main>
 	);
