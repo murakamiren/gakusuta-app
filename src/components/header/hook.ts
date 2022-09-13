@@ -11,6 +11,8 @@ export const useHeaderTitle = () => {
 	const areaQueryParam = router.query.area;
 	const facilityQueryParam = router.query.facility;
 
+	console.log(router);
+
 	useEffect(() => {
 		if (decodedCurrentPath === `/search/${areaQueryParam}`) {
 			setIsLocationIcon(true);
@@ -41,7 +43,7 @@ export const useHeaderTitle = () => {
 			default:
 				setHeaderTitle("デフォルト");
 		}
-	}, [currentPath, areaQueryParam]);
+	}, [currentPath]);
 
 	const back = () => {
 		if (decodedCurrentPath === `/search/${areaQueryParam}`) return router.replace("/search");

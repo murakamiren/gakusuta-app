@@ -6,6 +6,8 @@ export type ButtonProps = {
 	isDelete?: boolean;
 	isDetail?: boolean;
 	bgColor?: string;
+	borderColor?: string;
 	mx?: string;
 	my?: string;
+	isWidthFull?: boolean;
 };

@@ -2,7 +2,19 @@ import classNames from "classnames";
 import { FC } from "react";
 import { ButtonProps } from "./type";
 
-const Button: FC<ButtonProps> = ({ onClick, text, isDelete, isDetail, color, bgColor, mx, my, fontSize }) => {
+const Button: FC<ButtonProps> = ({
+	onClick,
+	text,
+	isDelete,
+	isDetail,
+	color,
+	bgColor,
+	mx,
+	my,
+	fontSize,
+	borderColor,
+	isWidthFull,
+}) => {
 	return (
 		<button
 			onClick={onClick}
@@ -10,7 +22,9 @@ const Button: FC<ButtonProps> = ({ onClick, text, isDelete, isDetail, color, bgC
 				"rounded-md",
 				isDelete && "border-primary-black border",
 				isDetail && "border-primary-purple border",
-				bgColor && bgColor
+				bgColor && bgColor,
+				borderColor && `border ${borderColor}`,
+				isWidthFull && "w-full"
 			)}
 		>
 			<p

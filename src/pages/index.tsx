@@ -8,7 +8,7 @@ import FacilityCard from "../components/facilityCard/facilityCard";
 
 const Home: NextPageWithLayout = () => {
 	return (
-		<main className="mb-[130px] ">
+		<main className="mb-[130px]">
 			<div className="mt-6 pl-6 flex flex-nowrap overflow-x-scroll hidden-scrollbar">
 				<div className="space-x-2 flex">
 					<EventBanner size="base" img="banner-1.png" />

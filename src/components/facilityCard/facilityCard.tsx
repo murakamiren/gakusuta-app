@@ -6,8 +6,10 @@ import BottomInfo from "./bottomInfo/bottomInfo";
 import Divider from "../divider/divider";
 import Feature from "../feature/feature";
 import Image from "next/image";
+import { useFacilityCard } from "./hook";
 
 const FacilityCard: FC<FacilityCardProps> = ({ size, isFavorite }) => {
+	const { pushDetail } = useFacilityCard();
 	return (
 		<div
 			className={classNames(
@@ -15,6 +17,7 @@ const FacilityCard: FC<FacilityCardProps> = ({ size, isFavorite }) => {
 				size === "base" && "w-[266px] h-[395px]",
 				size === "xl" && "w-full h-[440px]"
 			)}
+			onClick={() => pushDetail(1)}
 		>
 			<div className="w-full h-full px-[14px] pt-[10px] pb-5 flex flex-col justify-start">
 				<div
