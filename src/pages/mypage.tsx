@@ -1,5 +1,6 @@
 import { NextPageWithLayout } from "next";
 import Footer from "../components/footer/footer";
+import MyPageHeader from "../components/myPageHeader/myPgaeHeader";
 
 const MyPage: NextPageWithLayout = () => {
 	return (
@@ -11,6 +12,7 @@ const MyPage: NextPageWithLayout = () => {
 
 MyPage.getLayout = (page) => (
 	<>
+		<MyPageHeader />
 		{page}
 		<Footer />
 	</>
