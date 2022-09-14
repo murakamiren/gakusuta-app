@@ -25,6 +25,10 @@ export const useHeaderTitle = () => {
 				setIsDetail(false);
 				setHeaderTitle("ホーム");
 				break;
+			case "/login":
+				setIsDetail(false);
+				setHeaderTitle("ログイン");
+				break;
 			case "/search":
 				setIsDetail(false);
 				setHeaderTitle("利用するエリアを入力する");
@@ -64,6 +68,7 @@ export const useHeaderTitle = () => {
 
 	const isBackArrowExist = () => {
 		if (isParamEmpty && currentPath === "/search") return true;
+		if (isParamEmpty && currentPath === "/login") return true;
 		return !isParamEmpty;
 	};
 
