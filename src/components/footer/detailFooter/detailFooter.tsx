@@ -3,7 +3,7 @@ import Button from "../../button/button";
 import { DetailFooterProps } from "../type";
 import { useDetailFooter } from "./hook";
 
-const DetailFooter: FC<DetailFooterProps> = ({ facilityId }) => {
+const DetailFooter: FC<DetailFooterProps> = ({ facilityId, disable }) => {
 	const { pushReserve } = useDetailFooter();
 	return (
 		<footer className="fixed bottom-0 w-screen bg-white rounded-t-2xl">

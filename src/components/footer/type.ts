@@ -6,4 +6,9 @@ export type bottomNavItemType = {
 
 export type DetailFooterProps = {
 	facilityId: number;
+	disable: boolean;
+};
+
+export type ReverseFooterProps = {
+	disable: boolean;
 };

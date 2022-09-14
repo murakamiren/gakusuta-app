@@ -25,9 +25,9 @@ export const useHeaderTitle = () => {
 				setIsDetail(false);
 				setHeaderTitle("ホーム");
 				break;
-			case "/login":
+			case "/signup":
 				setIsDetail(false);
-				setHeaderTitle("ログイン");
+				setHeaderTitle("アカウント登録");
 				break;
 			case "/search":
 				setIsDetail(false);
