@@ -10,7 +10,7 @@ const MyPageHeader: FC = () => {
 				</div>
 				<div className="pt-[10px] flex flex-col items-center">
 					<div className="w-[100px] h-[100px] bg-white rounded-3xl overflow-hidden">
-						<p>image</p>
+						<img src="/image/mypage.png" alt="aaaa" className="w-full h-full" />
 					</div>
 					<p className="text-2xl font-semibold text-white mt-3">miki</p>
 				</div>

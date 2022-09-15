@@ -12,7 +12,7 @@ export const useLogin = (email: string, password: string, confirmPassword: strin
 		if (password !== confirmPassword) return setError("パスワードが一致していません");
 
 		setDisable(false);
-	}, [email, password]);
+	}, [email, password, confirmPassword]);
 
 	const handleLogin = () => {
 		router.push("/intro");
